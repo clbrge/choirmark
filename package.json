@@ -10,9 +10,12 @@
     "spec/LICENSE"
   ],
   "scripts": {
+    "lint": "standard",
     "test": "node --test",
     "examples": "node tools/extract-examples.js spec/spec.md",
-    "build:spec": "node tools/build-spec.js spec/spec.md"
+    "build:spec": "node tools/build-spec.js spec/spec.md",
+    "prerelease": "npm run lint && npm run test",
+    "release": "release-it"
   },
   "keywords": [
     "choirmark",
@@ -35,5 +38,34 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public",
+    "provenance": true
+  },
+  "release-it": {
+    "hooks": {
+      "before:bump": "grep -q '^## \\[${version}\\]' CHANGELOG.md || (echo 'CHANGELOG.md is missing a ## [${version}] section — add it before releasing.' >&2 && exit 1)",
+      "after:bump": "npm install --package-lock-only --ignore-scripts"
+    },
+    "git": {
+      "commitMessage": "release: v${version}",
+      "requireUpstream": false,
+      "tagName": "v${version}",
+      "push": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true,
+      "releaseName": "choirmark v${version}",
+      "releaseNotes": "awk '/^## \\[${version}\\]/{flag=1;next}/^## \\[/{flag=0}flag' CHANGELOG.md"
+    }
+  },
+  "devDependencies": {
+    "release-it": "^20.2.0",
+    "standard": "^17.1.2"
   }
 }

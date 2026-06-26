@@ -6,6 +6,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/) · Versioning: [SemVer](
 ## [Unreleased]
 
 ### Added
-- Initial repository scaffold: specification skeleton (`spec/spec.md`), reference-implementation
-  stubs (`src/`), and the spec-as-conformance-suite harness (`tools/extract-examples.js` +
-  `test/spec.test.js`).
+- Initial repository scaffold: reference-implementation stubs (`src/`) and the
+  spec-as-conformance-suite harness (`tools/extract-examples.js` + `test/spec.test.js`).
+- `spec/spec.md` filled out (consolidated from the engine's format doc): the extension profile,
+  roles, structural auto-roles, relational markup, the two densities, and a worked example.
