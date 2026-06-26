@@ -5,7 +5,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/) · Versioning: [SemVer](
 
 ## [Unreleased]
 
-## [0.1.1] — Initial public package
+## [0.1.0] — Initial public package
 
 ### Added
 - Initial repository scaffold: reference-implementation stubs (`src/`) and the
