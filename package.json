@@ -1,0 +1,39 @@
+{
+  "name": "choirmark",
+  "version": "0.0.1",
+  "description": "An open format for documents — content carries the meaning, themes carry the look. Like CommonMark, but for whole documents.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "files": [
+    "src",
+    "spec/spec.md",
+    "spec/LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "examples": "node tools/extract-examples.js spec/spec.md",
+    "build:spec": "node tools/build-spec.js spec/spec.md"
+  },
+  "keywords": [
+    "choirmark",
+    "cmk",
+    "document",
+    "markup",
+    "commonmark",
+    "format",
+    "specification"
+  ],
+  "author": "Christophe Le Bars",
+  "license": "MIT",
+  "homepage": "https://choirmark.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clbrge/choirmark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clbrge/choirmark/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

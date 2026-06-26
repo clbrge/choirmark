@@ -1,0 +1,9 @@
+The ChoirMark specification — everything in this directory (spec/) — is licensed under the
+Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+
+    https://creativecommons.org/licenses/by-sa/4.0/
+
+Copyright (c) 2026 Christophe Le Bars
+
+The reference implementation (all code outside spec/) is licensed separately under the MIT
+License — see the LICENSE file at the repository root.
